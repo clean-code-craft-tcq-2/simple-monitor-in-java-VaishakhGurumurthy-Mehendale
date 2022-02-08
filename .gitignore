@@ -1,1 +1,4 @@
 **/*.class
+/out/
+/.idea/
+/simple-monitor-in-java-VaishakhGurumurthy-Mehendale.iml
