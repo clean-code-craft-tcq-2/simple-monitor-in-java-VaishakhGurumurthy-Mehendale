@@ -19,9 +19,9 @@ public class Main {
             initialize additional sensors here
         */
 
-        temperatureSensor = new TemperatureSensor(0, 45);
-        chargeStateSensor = new ChargeStateSensor(20, 80);
-        chargeRateSensor = new ChargeRateSensor( 0.0f, 0.8f);
+        temperatureSensor = new TemperatureSensor(0, 45, 5);
+        chargeStateSensor = new ChargeStateSensor(20, 80, 5);
+        chargeRateSensor = new ChargeRateSensor( 0.0f, 0.8f, 5);
 
     }
 
@@ -35,6 +35,17 @@ public class Main {
 
         assert (chargeRateSensor.isInRange(0.8f));
         assert (chargeRateSensor.isInRange(0.9f) == false);
+
+
+
+        assert (temperatureSensor.isWarningApproached(45));
+        assert (temperatureSensor.isWarningApproached(32) == false);
+
+        assert (chargeStateSensor.isWarningApproached(21));
+        assert (chargeStateSensor.isWarningApproached(60) == false);
+
+        assert (chargeRateSensor.isWarningApproached(0.8f));
+        assert (chargeRateSensor.isWarningApproached(0.5f) == false);
 
     }
 

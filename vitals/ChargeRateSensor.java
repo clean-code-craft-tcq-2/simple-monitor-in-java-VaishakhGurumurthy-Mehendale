@@ -2,8 +2,8 @@ package vitals;
 
 public class ChargeRateSensor extends Sensor{
 
-    ChargeRateSensor(float lowerLimit, float upperLimit) {
-        super(lowerLimit, upperLimit);
+    ChargeRateSensor(float lowerLimit, float upperLimit, int warningPerc) {
+        super(lowerLimit, upperLimit, warningPerc);
     }
 
 }
