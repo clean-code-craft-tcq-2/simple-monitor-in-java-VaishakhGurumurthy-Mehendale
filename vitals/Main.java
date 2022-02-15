@@ -5,6 +5,7 @@ public class Main {
     static TemperatureSensor temperatureSensor;
     static ChargeStateSensor chargeStateSensor;
     static ChargeRateSensor chargeRateSensor;
+    static int LANGUAGE_CODE;
 
     static boolean batteryIsOk(float temperature, float soc, float chargeRate) {
         return temperatureSensor.isInRange(temperature) && chargeStateSensor.isInRange(soc) && chargeRateSensor.isInRange(chargeRate);
@@ -19,6 +20,7 @@ public class Main {
             initialize additional sensors here
         */
 
+        LANGUAGE_CODE = 1; //0 -> English | 1 -> German
         temperatureSensor = new TemperatureSensor(0, 45, 5);
         chargeStateSensor = new ChargeStateSensor(20, 80, 5);
         chargeRateSensor = new ChargeRateSensor( 0.0f, 0.8f, 5);
