@@ -11,7 +11,7 @@ public class Sensor {
         this.upperLimit = upperLimit;
         this.warningPerc = warningPerc;
     }
-    
+
 
 
     protected boolean isWarningApproached(float value){
