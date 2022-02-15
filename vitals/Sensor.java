@@ -20,11 +20,11 @@ public class Sensor {
         float upperEnd = this.upperLimit - WARNING_CONST ;
 
         if( value <= lowerEnd ){
-            PrintEngine.printCode(1, this.getClass().getName());
+            PrintEngine.printWarningCode(1, this.getClass().getName());
             return true;
         }
         if( value >= upperEnd){
-            PrintEngine.printCode(2, this.getClass().getName());
+            PrintEngine.printWarningCode(2, this.getClass().getName());
             return true;
         }
 
@@ -40,7 +40,7 @@ public class Sensor {
 
     protected void printErrorCondition(boolean sensorState){
         if(!sensorState)
-            PrintEngine.printCode(3, this.getClass().getName());
+            PrintEngine.printErrorCode(1, this.getClass().getName());
     }
 
 }
